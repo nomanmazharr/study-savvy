@@ -3,7 +3,11 @@ from gpt_model import generate_study_plan
 from upload import upload_and_read_file
 
 # Streamlit user interface
-st.title("Personalized Study Assistant Chatbot")
+
+st.set_page_config(page_title="Study Savvy", page_icon="source/images/logo.jpg")
+
+st.image('source/images/logo.jpg', width=80)
+st.title("Study Savvy")
 st.write("I’m here to help you organize your study plan with tailored resources and tips. Let's get started!")
 
 # User input for study details
@@ -30,7 +34,10 @@ if st.button("Generate Study Plan"):
     st.write("### Your Study Plan")
     st.write(st.session_state.study_plan)
 
-if st.session_state.study_plan and st.button("Save Study Plan to Text File"):
-    with open("study_plan.txt", "w") as file:
-        file.write(st.session_state.study_plan)
-    st.success("Study plan saved to study_plan.txt")
+if st.session_state.study_plan:
+    st.download_button(
+        label="Download Study Plan",
+        data=st.session_state.study_plan,
+        file_name="study_plan.txt",
+        mime="text/plain"
+    )
