@@ -1,4 +1,4 @@
 .env
 gpt-4o
 __pycache__
-*.txt
+study_plan.txt
