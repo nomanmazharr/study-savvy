@@ -1,0 +1,4 @@
+.env
+gpt-4o
+__pycache__
+*.txt
