@@ -1,6 +1,6 @@
 # Study Savvy (Study Smarter, Not Harder.)
 
-<img src="Logo.png" >
+<img src="Logo.jpg" >
 
 ## Description
 
